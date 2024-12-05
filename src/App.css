@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: rgb(10, 2, 54);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+}
+.center-container{
+  margin: auto;
+  height: 500px;
+  width: 500px;
+  border: 20px;
+}
+.app-heading{
+  padding: 4px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.add {
+  background-color: white;
+  border: none;
+  border-radius: 45px;
+  color: rgb(10, 2, 54);
+  margin: 40px 30px;
+  padding: 3px 7px;
+  text-align: center;
+  text-decoration: solid;
+  display: inline-block;
+  font-size: 25px;
+  border: 2px solid transparent; /* Default border (invisible) */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add:hover {
+  background-color: rgb(10, 2, 54); /* Dark blue background on hover */
+  color: white; /* Text color changes to white */
+  border: 2px solid white; /* White border appears */
+  cursor: pointer; /* Pointer cursor for better UX */
+}
+
+.input-box{
+  display: inline-block;
+  margin: 20px 10px;
+  padding: 0px 5px;
+  width: 300px;
+  height: 30px;
+}
+.list-item {
+  width: 70%;
+  max-height: fit-content;
+  display: flex;
+  justify-content: space-between; /* Distribute items with space between */
+  align-items: center; /* Vertically align items */
+  background-color: white;
+  color: rgb(10, 2, 54);
+  border: 5px;
+  border-style: double;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px auto; /* Center horizontally */
+}
+
+.list-item .icons {
+  margin-left: auto; /* Push icons to the right end */
+}
+.no-tasks{
+  color: white;
+  justify-self: center;
+}
+.no-tasks-image{
+  height: 150px;
+  width: 150px;
+  margin: 20px 100px;
+}
+.add-task{
+  font-size: small;
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 2px;
+}
+.checkbox {
+  margin-right: 10px;
+  transform: scale(1.2); /* Make it larger for better visibility */
+}
+
+.checkbox:checked {
+  accent-color: green; /* Change checkbox color to green */
+}
+
+.task-text {
+  font-size: 18px;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: gray;
 }
